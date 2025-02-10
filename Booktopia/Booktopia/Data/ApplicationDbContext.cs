@@ -18,6 +18,19 @@ namespace Booktopia.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ReadingList>()
+                .HasKey(rl => new { rl.UserID, rl.BookId });
+
+            modelBuilder.Entity<ReadingList>()
+           .HasOne(rl => rl.Book)
+           .WithMany(b => b.ReadingList)
+           .HasForeignKey(rl => rl.BookId);
+
+            modelBuilder.Entity<ReadingList>()
+                .HasOne(rl => rl.User)
+                .WithMany()
+                .HasForeignKey(rl => rl.UserID);
         }
     }
 }

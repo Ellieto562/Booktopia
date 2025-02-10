@@ -4,19 +4,16 @@ using Booktopia.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Booktopia.Data.Migrations
+namespace Booktopia.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250209112612_Intial")]
-    partial class Intial
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,9 +53,6 @@ namespace Booktopia.Data.Migrations
                     b.Property<int>("GenreID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ReadingListId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -68,8 +62,6 @@ namespace Booktopia.Data.Migrations
                     b.HasIndex("AuthorId");
 
                     b.HasIndex("GenreID");
-
-                    b.HasIndex("ReadingListId");
 
                     b.ToTable("Books");
                 });
@@ -93,11 +85,8 @@ namespace Booktopia.Data.Migrations
 
             modelBuilder.Entity("Booktopia.Models.Entities.ReadingList", b =>
                 {
-                    b.Property<int>("ReadingListId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReadingListId"));
+                    b.Property<string>("UserID")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("BookId")
                         .HasColumnType("int");
@@ -106,10 +95,10 @@ namespace Booktopia.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserID")
+                    b.Property<int>("ReadingListId")
                         .HasColumnType("int");
 
-                    b.HasKey("ReadingListId");
+                    b.HasKey("UserID", "BookId");
 
                     b.HasIndex("BookId");
 
@@ -331,11 +320,6 @@ namespace Booktopia.Data.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
-                    b.Property<int?>("ReadingListId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("ReadingListId");
-
                     b.HasDiscriminator().HasValue("Users");
                 });
 
@@ -353,10 +337,6 @@ namespace Booktopia.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Booktopia.Models.Entities.ReadingList", null)
-                        .WithMany("Books")
-                        .HasForeignKey("ReadingListId");
-
                     b.Navigation("Author");
 
                     b.Navigation("Genre");
@@ -365,12 +345,20 @@ namespace Booktopia.Data.Migrations
             modelBuilder.Entity("Booktopia.Models.Entities.ReadingList", b =>
                 {
                     b.HasOne("Booktopia.Models.Entities.Book", "Book")
-                        .WithMany()
+                        .WithMany("ReadingList")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Booktopia.Models.Entities.Users", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Book");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -424,28 +412,19 @@ namespace Booktopia.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Booktopia.Models.Entities.Users", b =>
-                {
-                    b.HasOne("Booktopia.Models.Entities.ReadingList", null)
-                        .WithMany("Users")
-                        .HasForeignKey("ReadingListId");
-                });
-
             modelBuilder.Entity("Booktopia.Models.Entities.Author", b =>
                 {
                     b.Navigation("Books");
                 });
 
+            modelBuilder.Entity("Booktopia.Models.Entities.Book", b =>
+                {
+                    b.Navigation("ReadingList");
+                });
+
             modelBuilder.Entity("Booktopia.Models.Entities.Genre", b =>
                 {
                     b.Navigation("Books");
-                });
-
-            modelBuilder.Entity("Booktopia.Models.Entities.ReadingList", b =>
-                {
-                    b.Navigation("Books");
-
-                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

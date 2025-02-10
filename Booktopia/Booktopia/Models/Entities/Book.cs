@@ -8,5 +8,6 @@
         public Author Author { get; set; }
         public int GenreID { get; set; }
         public Genre Genre { get; set; }
+        public ICollection<ReadingList> ReadingList { get; set; } = new List<ReadingList>();
     }
 }
