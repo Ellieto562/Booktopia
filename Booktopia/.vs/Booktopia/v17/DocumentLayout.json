@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\controllers\\readinglistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\controllers\\readinglistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Models\\Entities\\Book.cs",
-              "RelativeDocumentMoniker": "Booktopia\\Models\\Entities\\Book.cs",
-              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Models\\Entities\\Book.cs",
-              "RelativeToolTip": "Booktopia\\Models\\Entities\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABcAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ReadingListController.cs",
+              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Controllers\\ReadingListController.cs",
+              "RelativeDocumentMoniker": "Booktopia\\Controllers\\ReadingListController.cs",
+              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Controllers\\ReadingListController.cs",
+              "RelativeToolTip": "Booktopia\\Controllers\\ReadingListController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T13:50:00.588Z",
+              "WhenOpened": "2025-02-13T19:15:11.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Booktopia\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Booktopia\\Controllers\\BookController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T18:52:25.653Z",
               "EditorCaption": ""
             }
           ]

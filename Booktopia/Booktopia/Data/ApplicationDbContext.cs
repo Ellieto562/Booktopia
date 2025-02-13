@@ -4,7 +4,7 @@ using Booktopia.Models.Entities;
 
 namespace Booktopia.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<Users>
     {
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
@@ -20,7 +20,7 @@ namespace Booktopia.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<ReadingList>()
-                .HasKey(rl => new { rl.UserID, rl.BookId });
+                .HasKey(rl => new { rl.UserId, rl.BookId });
 
             modelBuilder.Entity<ReadingList>()
            .HasOne(rl => rl.Book)
@@ -30,7 +30,7 @@ namespace Booktopia.Data
             modelBuilder.Entity<ReadingList>()
                 .HasOne(rl => rl.User)
                 .WithMany()
-                .HasForeignKey(rl => rl.UserID);
+                .HasForeignKey(rl => rl.UserId);
         }
     }
 }

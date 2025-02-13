@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Booktopia.ewd4yvr2yr.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Xo01M46\u002BgGUd6pp/hDEWaH95jbc7JmzJeM7ZtGQ47w8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1127"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Xo01M46\u002BgGUd6pp/hDEWaH95jbc7JmzJeM7ZtGQ47w8=\u0022"},{"Name":"Last-Modified","Value":"Sun, 09 Feb 2025 10:47:34 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1127"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Xo01M46\u002BgGUd6pp/hDEWaH95jbc7JmzJeM7ZtGQ47w8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 13 Feb 2025 19:12:59 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Booktopia/Booktopia.ewd4yvr2yr.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Booktopia.ewd4yvr2yr.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ewd4yvr2yr"},{"Name":"integrity","Value":"sha256-Xo01M46\u002BgGUd6pp/hDEWaH95jbc7JmzJeM7ZtGQ47w8="},{"Name":"label","Value":"_content/Booktopia/Booktopia.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1127"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Xo01M46\u002BgGUd6pp/hDEWaH95jbc7JmzJeM7ZtGQ47w8=\u0022"},{"Name":"Last-Modified","Value":"Sun, 09 Feb 2025 10:47:34 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1127"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Xo01M46\u002BgGUd6pp/hDEWaH95jbc7JmzJeM7ZtGQ47w8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 13 Feb 2025 19:12:59 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Booktopia/css/site.c2tiyv64ts.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
