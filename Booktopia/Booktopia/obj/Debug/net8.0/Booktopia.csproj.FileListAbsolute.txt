@@ -19,6 +19,7 @@ C:\Users\elica\OneDrive\Работен плот\Project Booktopia\Booktopia\Book
 C:\Users\elica\OneDrive\Работен плот\Project Booktopia\Booktopia\Booktopia\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\elica\OneDrive\Работен плот\Project Booktopia\Booktopia\Booktopia\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\elica\OneDrive\Работен плот\Project Booktopia\Booktopia\Booktopia\bin\Debug\net8.0\Humanizer.dll
+C:\Users\elica\OneDrive\Работен плот\Project Booktopia\Booktopia\Booktopia\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
 C:\Users\elica\OneDrive\Работен плот\Project Booktopia\Booktopia\Booktopia\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\elica\OneDrive\Работен плот\Project Booktopia\Booktopia\Booktopia\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\elica\OneDrive\Работен плот\Project Booktopia\Booktopia\Booktopia\bin\Debug\net8.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll

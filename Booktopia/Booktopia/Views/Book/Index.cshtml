@@ -1,0 +1,53 @@
+﻿@* Views/Book/Index.cshtml *@
+@model List<Booktopia.Models.Entities.Book>
+
+@{
+    ViewData["Title"] = "Books List";
+}
+
+<h2>Books</h2>
+<form method="get">
+    <input type="text" name="searchString" placeholder="Search by title" />
+    <button type="submit">Search</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Average Rating</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@(book.Author != null ? book.Author.Name : "Unknown")</td>
+                <td>@(book.Genre != null ? book.Genre.Name : "Unknown")</td>
+                <td>
+                    @if (book.Ratings.Any())
+                    {
+                        @(book.Ratings.Average(r => r.Value))
+                    }
+                    else
+                    {
+                        <span>No Ratings</span>
+                    }
+                </td>
+                <td>
+                    <a href="@Url.Action("Update", "Book", new { id = book.Id })">Edit</a> |
+                    <a href="@Url.Action("Remove", "Book", new { id = book.Id })">Delete</a> |
+                    <a href="@Url.Action("Rate", "Ratings", new { bookId = book.Id })">Rate</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Book/Add">Add New Book</a>
+
+

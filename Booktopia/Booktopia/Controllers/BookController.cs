@@ -2,79 +2,99 @@
 using Booktopia.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Booktopia.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class BooksController : ControllerBase
+    public class BookController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public BooksController(ApplicationDbContext context)
+        public BookController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/books - Fetch all books
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Book>>> GetBooks()
+        public IActionResult Index(string searchString)
         {
-            return await _context.Books.ToListAsync();
+            var books = _context.Books
+            .Include(b => b.Author)
+            .Include(b => b.Genre)
+            .Include(b => b.Ratings)
+            .ToList();
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                books = books.Where(b => b.Title.Contains(searchString)).ToList();
+            }
+
+            return View(books);
         }
 
-        // GET: api/books/{id} - Fetch a single book by ID
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Book>> GetBook(int id)
-        {
-            var book = await _context.Books.FindAsync(id);
-            if (book == null)
-                return NotFound();
 
-            return book;
-        }
+        [Authorize]
+        public IActionResult Add() => View();
 
-        //POST: api/books - Create a new book (Admin/User required)
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<Book>> CreateBook(Book book)
+        public IActionResult Add(Book book)
         {
-            _context.Books.Add(book);
-            await _context.SaveChangesAsync();
+            
+            ViewBag.Authors = new SelectList(_context.Authors, "Id", "Name");
+            ViewBag.Genres = new SelectList(_context.Genres, "Id", "Name");
+            if (ModelState.IsValid)
+            {
 
-            return CreatedAtAction(nameof(GetBook), new { id = book.Id }, book);
+                _context.Books.Add(book);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(book);
         }
 
-        // PUT: api/books/{id} - Update an existing book
-        [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateBook(int id, Book book)
+        [Authorize]
+        public IActionResult Update(int id)
         {
-            if (id != book.Id)
-                return BadRequest();
-
-            _context.Entry(book).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            var book = _context.Books.Find(id);
+            if (book == null) return NotFound();
+            return View(book);
         }
 
-        // DELETE: api/books/{id} - Delete a book
-        [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> DeleteBook(int id)
+        [HttpPost]
+        [Authorize]
+        public IActionResult Update(Book book)
         {
-            var book = await _context.Books.FindAsync(id);
-            if (book == null)
-                return NotFound();
+            if (ModelState.IsValid)
+            {
+                _context.Update(book);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(book);
+        }
+
+        [Authorize]
+        public IActionResult Remove(int id)
+        {
+            var book = _context.Books.Find(id);
+            if (book == null) return NotFound();
+            return View(book);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public IActionResult RemoveConfirmed(int id)
+        {
+            var book = _context.Books.Find(id);
+            if (book == null) return NotFound();
 
             _context.Books.Remove(book);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

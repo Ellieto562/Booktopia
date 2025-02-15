@@ -1,0 +1,9 @@
+﻿@* Views/Book/Remove.cshtml *@
+@model Booktopia.Models.Entities.Book
+
+<h2>Delete Book</h2>
+<p>Are you sure you want to delete "@Model.Title"?</p>
+<form method="post" action="/Book/RemoveConfirmed/@Model.Id">
+    <button type="submit">Yes, Delete</button>
+    <a href="/Book/Index">Cancel</a>
+</form>

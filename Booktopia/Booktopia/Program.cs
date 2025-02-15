@@ -2,12 +2,13 @@ using Booktopia.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Booktopia.Models.Entities;
+using Microsoft.AspNet.Identity;
 
 namespace Booktopia
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,7 @@ namespace Booktopia
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
             builder.Services.AddDefaultIdentity<Users>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
 
@@ -35,6 +37,8 @@ namespace Booktopia
                 app.UseHsts();
             }
 
+
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -46,7 +50,35 @@ namespace Booktopia
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
-
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var roleManager = services.GetRequiredService<Microsoft.AspNetCore.Identity.RoleManager<IdentityRole>>();
+                    var userManager = services.GetRequiredService<Microsoft.AspNetCore.Identity.UserManager<Users>>();
+                    string[] roles = { "Admin", "User" };
+                    foreach (var role in roles)
+                    {
+                        if (!await roleManager.RoleExistsAsync(role))
+                        {
+                            await roleManager.CreateAsync(new IdentityRole(role));
+                        }
+                    }
+                    var adminUsers = await userManager.Users.Where(u => u.Email.EndsWith("@admin.com")).ToListAsync();
+                    foreach (var user in adminUsers)
+                    {
+                        if (!await userManager.IsInRoleAsync(user, "Admin"))
+                        {
+                            await userManager.AddToRoleAsync(user, "Admin");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error seeding roles: {ex.Message}");
+                }
+            }
             app.Run();
         }
     }

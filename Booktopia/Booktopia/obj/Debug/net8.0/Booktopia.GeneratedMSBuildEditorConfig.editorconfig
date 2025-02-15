@@ -32,12 +32,36 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/elica/OneDrive/Работен плот/Project Booktopia/Booktopia/Booktopia/Views/Book/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elica/OneDrive/Работен плот/Project Booktopia/Booktopia/Booktopia/Views/Book/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elica/OneDrive/Работен плот/Project Booktopia/Booktopia/Booktopia/Views/Book/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xSZW1vdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elica/OneDrive/Работен плот/Project Booktopia/Booktopia/Booktopia/Views/Book/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/elica/OneDrive/Работен плот/Project Booktopia/Booktopia/Booktopia/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/elica/OneDrive/Работен плот/Project Booktopia/Booktopia/Booktopia/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elica/OneDrive/Работен плот/Project Booktopia/Booktopia/Booktopia/Views/Ratings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmF0aW5nc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elica/OneDrive/Работен плот/Project Booktopia/Booktopia/Booktopia/Views/Ratings/Ratings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmF0aW5nc1xSYXRpbmdzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/elica/OneDrive/Работен плот/Project Booktopia/Booktopia/Booktopia/Views/Shared/Error.cshtml]

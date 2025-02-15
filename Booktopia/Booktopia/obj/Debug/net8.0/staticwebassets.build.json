@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "91MCRp4NI5mqHdbzHwdNC1iA/JYgsBMNzDH8KxTcFOo=",
+  "Hash": "A7/6gOFqkUR7+3g+d0mI8Remx8vRfnzpm3XzoMQLIKg=",
   "Source": "Booktopia",
   "BasePath": "_content/Booktopia",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "i4swojqy85",
+      "Integrity": "YrpA9yIVn31BXErjO/gMQEnVFqFfynXQ9OjTpKc21iY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2603,7 +2603,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 19:12:59 GMT"
+          "Value": "Sat, 15 Feb 2025 11:41:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2640,7 +2640,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 19:12:59 GMT"
+          "Value": "Sat, 15 Feb 2025 11:41:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2685,7 +2685,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 19:12:59 GMT"
+          "Value": "Sat, 15 Feb 2025 11:41:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2730,7 +2730,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Feb 2025 19:12:59 GMT"
+          "Value": "Sat, 15 Feb 2025 11:41:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2745,51 +2745,6 @@
       ]
     },
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "362"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 08 Feb 2025 13:39:35 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2800,7 +2755,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "901"
         },
         {
           "Name": "Content-Type",
@@ -2808,11 +2763,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"YrpA9yIVn31BXErjO/gMQEnVFqFfynXQ9OjTpKc21iY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 08 Feb 2025 13:39:35 GMT"
+          "Value": "Sat, 15 Feb 2025 12:02:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2822,7 +2777,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-YrpA9yIVn31BXErjO/gMQEnVFqFfynXQ9OjTpKc21iY="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.i4swojqy85.css",
+      "AssetFile": "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YrpA9yIVn31BXErjO/gMQEnVFqFfynXQ9OjTpKc21iY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Feb 2025 12:02:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i4swojqy85"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YrpA9yIVn31BXErjO/gMQEnVFqFfynXQ9OjTpKc21iY="
         }
       ]
     },
