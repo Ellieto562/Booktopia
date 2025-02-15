@@ -1,9 +1,14 @@
 ﻿@* Views/Book/Remove.cshtml *@
 @model Booktopia.Models.Entities.Book
 
-<h2>Delete Book</h2>
-<p>Are you sure you want to delete "@Model.Title"?</p>
-<form method="post" action="/Book/RemoveConfirmed/@Model.Id">
-    <button type="submit">Yes, Delete</button>
-    <a href="/Book/Index">Cancel</a>
+<h2>Are you sure you want to delete this book?</h2>
+
+<p>Title: @Model.Title</p>
+<p>Author: @Model.Author</p>
+<p>Genre: @Model.Genre</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
 </form>

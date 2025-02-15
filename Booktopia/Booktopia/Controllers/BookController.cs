@@ -1,11 +1,8 @@
-﻿using Booktopia.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using Booktopia.Data;
+using Booktopia.Models;
+using System.Linq;
 using Booktopia.Models.Entities;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Booktopia.Controllers
 {
@@ -18,82 +15,99 @@ namespace Booktopia.Controllers
             _context = context;
         }
 
-        public IActionResult Index(string searchString)
+        public IActionResult Index(string searchQuery)
         {
-            var books = _context.Books
-            .Include(b => b.Author)
-            .Include(b => b.Genre)
-            .Include(b => b.Ratings)
-            .ToList();
+            var books = _context.Books.AsQueryable();
 
-            if (!string.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchQuery))
             {
-                books = books.Where(b => b.Title.Contains(searchString)).ToList();
+                books = books.Where(b => b.Title.Contains(searchQuery) ||
+                                         b.Author.Contains(searchQuery) ||
+                                         b.Genre.Contains(searchQuery));
             }
 
-            return View(books);
+            return View(books.ToList());
         }
 
 
-        [Authorize]
-        public IActionResult Add() => View();
+        public IActionResult Add()
+        {
+            return View();
+        }
 
         [HttpPost]
-        [Authorize]
         public IActionResult Add(Book book)
         {
-            
-            ViewBag.Authors = new SelectList(_context.Authors, "Id", "Name");
-            ViewBag.Genres = new SelectList(_context.Genres, "Id", "Name");
-            if (ModelState.IsValid)
-            {
+            Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Genre: {book.Genre}");
 
-                _context.Books.Add(book);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
+            if (!ModelState.IsValid)
+            {
+                Console.WriteLine("Model state is invalid.");
+                foreach (var error in ModelState)
+                {
+                    foreach (var subError in error.Value.Errors)
+                    {
+                        Console.WriteLine($"Field: {error.Key}, Error: {subError.ErrorMessage}");
+                    }
+                }
+                return View(book);
             }
 
-            return View(book);
+            _context.Books.Add(book);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
 
-        [Authorize]
+
+
+
         public IActionResult Update(int id)
         {
             var book = _context.Books.Find(id);
-            if (book == null) return NotFound();
+            if (book == null)
+            {
+                return NotFound();
+            }
             return View(book);
         }
 
         [HttpPost]
-        [Authorize]
         public IActionResult Update(Book book)
         {
             if (ModelState.IsValid)
             {
-                _context.Update(book);
-                _context.SaveChanges();
+                var existingBook = _context.Books.Find(book.Id);
+                if (existingBook != null)
+                {
+                    existingBook.Title = book.Title;
+                    existingBook.Author = book.Author;
+                    existingBook.Genre = book.Genre;
+                    _context.SaveChanges();
+                }
                 return RedirectToAction("Index");
             }
             return View(book);
         }
 
-        [Authorize]
         public IActionResult Remove(int id)
         {
             var book = _context.Books.Find(id);
-            if (book == null) return NotFound();
+            if (book == null)
+            {
+                return NotFound();
+            }
             return View(book);
         }
 
         [HttpPost]
-        [Authorize]
         public IActionResult RemoveConfirmed(int id)
         {
             var book = _context.Books.Find(id);
-            if (book == null) return NotFound();
-
-            _context.Books.Remove(book);
-            _context.SaveChanges();
+            if (book != null)
+            {
+                _context.Books.Remove(book);
+                _context.SaveChanges();
+            }
             return RedirectToAction("Index");
         }
     }

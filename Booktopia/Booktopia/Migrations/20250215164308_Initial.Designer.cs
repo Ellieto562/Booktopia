@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Booktopia.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250213191301_Initial")]
+    [Migration("20250215164308_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -69,6 +69,29 @@ namespace Booktopia.Migrations
                     b.ToTable("Books");
                 });
 
+            modelBuilder.Entity("Booktopia.Models.Entities.BookReadingList", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ReadingListId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("ReadingListId");
+
+                    b.ToTable("BookReadingLists");
+                });
+
             modelBuilder.Entity("Booktopia.Models.Entities.Genre", b =>
                 {
                     b.Property<int>("Id")
@@ -88,22 +111,23 @@ namespace Booktopia.Migrations
 
             modelBuilder.Entity("Booktopia.Models.Entities.ReadingList", b =>
                 {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("UserId", "BookId");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasIndex("BookId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("ReadingLists");
                 });
@@ -329,21 +353,32 @@ namespace Booktopia.Migrations
                     b.Navigation("Genre");
                 });
 
-            modelBuilder.Entity("Booktopia.Models.Entities.ReadingList", b =>
+            modelBuilder.Entity("Booktopia.Models.Entities.BookReadingList", b =>
                 {
                     b.HasOne("Booktopia.Models.Entities.Book", "Book")
-                        .WithMany("ReadingList")
+                        .WithMany("BookReadingLists")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Booktopia.Models.Entities.ReadingList", "ReadingList")
+                        .WithMany("BookReadingLists")
+                        .HasForeignKey("ReadingListId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("ReadingList");
+                });
+
+            modelBuilder.Entity("Booktopia.Models.Entities.ReadingList", b =>
+                {
                     b.HasOne("Booktopia.Models.Entities.Users", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Book");
 
                     b.Navigation("User");
                 });
@@ -406,12 +441,17 @@ namespace Booktopia.Migrations
 
             modelBuilder.Entity("Booktopia.Models.Entities.Book", b =>
                 {
-                    b.Navigation("ReadingList");
+                    b.Navigation("BookReadingLists");
                 });
 
             modelBuilder.Entity("Booktopia.Models.Entities.Genre", b =>
                 {
                     b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("Booktopia.Models.Entities.ReadingList", b =>
+                {
+                    b.Navigation("BookReadingLists");
                 });
 #pragma warning restore 612, 618
         }

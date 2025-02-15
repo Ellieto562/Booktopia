@@ -10,7 +10,7 @@ namespace Booktopia.Data
         public DbSet<Author> Authors { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<ReadingList> ReadingLists { get; set; }
-        public DbSet<BookRating> BookRatings { get; set; }
+        public DbSet<BookReadingList> BookReadingLists { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
@@ -20,28 +20,17 @@ namespace Booktopia.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<ReadingList>()
-                .HasKey(rl => new { rl.UserId, rl.BookId });
 
-            modelBuilder.Entity<ReadingList>()
-           .HasOne(rl => rl.Book)
-           .WithMany(b => b.ReadingList)
-           .HasForeignKey(rl => rl.BookId);
+            modelBuilder.Entity<BookReadingList>()
+               .HasOne(brl => brl.Book)
+               .WithMany(b => b.BookReadingLists)
+               .HasForeignKey(brl => brl.BookId);
 
-            modelBuilder.Entity<ReadingList>()
-                .HasOne(rl => rl.User)
-                .WithMany()
-                .HasForeignKey(rl => rl.UserId);
+            modelBuilder.Entity<BookReadingList>()
+                .HasOne(brl => brl.ReadingList)
+                .WithMany(rl => rl.BookReadingLists)
+                .HasForeignKey(brl => brl.ReadingListId);
 
-            modelBuilder.Entity<BookRating>()
-                .HasOne(br => br.Book)
-                .WithMany(b => b.Ratings)
-                .HasForeignKey(br => br.BookId);
-
-            modelBuilder.Entity<BookRating>()
-                .HasOne(br => br.User)
-                .WithMany()
-                .HasForeignKey(br => br.UserId);
         }
     }
 }

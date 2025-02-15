@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\controllers\\ratingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\views\\ratings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\views\\ratings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\views\\book\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\views\\book\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\views\\book\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\views\\book\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,93 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "Booktopia\\Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Booktopia\\Controllers\\BookController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAcwE8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T12:11:37.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RatingsController.cs",
-              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Controllers\\RatingsController.cs",
-              "RelativeDocumentMoniker": "Booktopia\\Controllers\\RatingsController.cs",
-              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Controllers\\RatingsController.cs*",
-              "RelativeToolTip": "Booktopia\\Controllers\\RatingsController.cs*",
-              "ViewState": "AgIAACsAAAAAAAAAAAAuwDoAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T12:07:44.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Book\\Index.cshtml",
-              "RelativeDocumentMoniker": "Booktopia\\Views\\Book\\Index.cshtml",
-              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Book\\Index.cshtml",
-              "RelativeToolTip": "Booktopia\\Views\\Book\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAVAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Booktopia\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Booktopia\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T12:05:22.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Ratings\\Index.cshtml",
-              "RelativeDocumentMoniker": "Booktopia\\Views\\Ratings\\Index.cshtml",
-              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Ratings\\Index.cshtml",
-              "RelativeToolTip": "Booktopia\\Views\\Ratings\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T12:02:10.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "Booktopia\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "Booktopia\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACsAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-15T12:02:30.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Book\\Add.cshtml",
-              "RelativeDocumentMoniker": "Booktopia\\Views\\Book\\Add.cshtml",
-              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Book\\Add.cshtml",
-              "RelativeToolTip": "Booktopia\\Views\\Book\\Add.cshtml",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAowCIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T12:01:34.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Update.cshtml",
-              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Book\\Update.cshtml",
-              "RelativeDocumentMoniker": "Booktopia\\Views\\Book\\Update.cshtml",
-              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Book\\Update.cshtml",
-              "RelativeToolTip": "Booktopia\\Views\\Book\\Update.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T12:01:16.813Z",
+              "WhenOpened": "2025-02-15T18:06:58.629Z",
               "EditorCaption": ""
             }
           ]

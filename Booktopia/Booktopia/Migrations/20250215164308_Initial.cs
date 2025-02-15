@@ -183,6 +183,26 @@ namespace Booktopia.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ReadingLists",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ReadingLists", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ReadingLists_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Books",
                 columns: table => new
                 {
@@ -210,27 +230,27 @@ namespace Booktopia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ReadingLists",
+                name: "BookReadingLists",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     BookId = table.Column<int>(type: "int", nullable: false),
-                    Id = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ReadingListId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ReadingLists", x => new { x.UserId, x.BookId });
+                    table.PrimaryKey("PK_BookReadingLists", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ReadingLists_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
+                        name: "FK_BookReadingLists_Books_BookId",
+                        column: x => x.BookId,
+                        principalTable: "Books",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ReadingLists_Books_BookId",
-                        column: x => x.BookId,
-                        principalTable: "Books",
+                        name: "FK_BookReadingLists_ReadingLists_ReadingListId",
+                        column: x => x.ReadingListId,
+                        principalTable: "ReadingLists",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -275,6 +295,16 @@ namespace Booktopia.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BookReadingLists_BookId",
+                table: "BookReadingLists",
+                column: "BookId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BookReadingLists_ReadingListId",
+                table: "BookReadingLists",
+                column: "ReadingListId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Books_AuthorId",
                 table: "Books",
                 column: "AuthorId");
@@ -285,9 +315,9 @@ namespace Booktopia.Migrations
                 column: "GenreID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ReadingLists_BookId",
+                name: "IX_ReadingLists_UserId",
                 table: "ReadingLists",
-                column: "BookId");
+                column: "UserId");
         }
 
         /// <inheritdoc />
@@ -309,22 +339,25 @@ namespace Booktopia.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "ReadingLists");
+                name: "BookReadingLists");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Books");
 
             migrationBuilder.DropTable(
-                name: "Books");
+                name: "ReadingLists");
 
             migrationBuilder.DropTable(
                 name: "Authors");
 
             migrationBuilder.DropTable(
                 name: "Genres");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
         }
     }
 }

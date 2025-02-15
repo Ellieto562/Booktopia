@@ -1,7 +1,29 @@
-﻿@model IEnumerable<Booktopia.Models.Entities.Book>
-
-@{
-    ViewData["Title"] = "Book List";
+﻿@{
+    ViewData["Title"] = "Home Page";
 }
+
+@if (!User.Identity.IsAuthenticated)
+{
+    <div class="booktopia-home">
+        <h1>Welcome to Booktopia!</h1>
+        <hr class="hr-2 bg-dark" />
+        <h3 class="mt-4"><a href="/Identity/Account/Login" class="action">Login</a> to explore books and create reading lists.</h3>
+        <h3 class="mt-4"><a href="/Identity/Account/Register" class="action">Register</a> if you don't have an account.</h3>
+    </div>
+}
+else
+{
+    <div>
+        <h1 class="text-center">Welcome to Booktopia!</h1>
+        <p>Booktopia is your personal reading companion. Organize, explore, and track your favorite books effortlessly. Here's what you can do:</p>
+        <ul>
+            <li>Browse Books: Discover a collection of books across various genres.</li>
+            <li>Create Reading Lists: Organize books into your custom reading lists.</li>
+            <li>Edit and Manage: Update your reading preferences and modify lists as you go.</li>
+            <li>Track Progress: Keep a record of books you've read and those on your wishlist.</li>
+        </ul>
+    </div>
+}
+
 
 

@@ -1,42 +1,26 @@
 ﻿@* Views/Book/Add.cshtml *@
 @model Booktopia.Models.Entities.Book
 
+<h2>Add a New Book</h2>
+
 <form asp-action="Add" method="post">
-    <div>
-        <label>Title</label>
+    <div class="form-group">
+        <label asp-for="Title">Title</label>
         <input asp-for="Title" class="form-control" required />
         <span asp-validation-for="Title" class="text-danger"></span>
     </div>
 
-    <div>
-        <label>Author</label>
-        <input asp-for="Author.Name" class="form-control" required />
-        <span asp-validation-for="Author.Name" class="text-danger"></span>
+    <div class="form-group">
+        <label asp-for="Author">Author</label>
+        <input type="text" asp-for="Author" class="form-control" required />
+        <span asp-validation-for="Author" class="text-danger"></span>
     </div>
 
-    <div>
-        <label>Genre</label>
-        <input asp-for="Genre.Name" class="form-control" required />
-        <span asp-validation-for="Genre.Name" class="text-danger"></span>
+    <div class="form-group">
+        <label asp-for="Genre">Genre</label>
+        <input type="text" asp-for="Genre" class="form-control" required />
+        <span asp-validation-for="Genre" class="text-danger"></span>
     </div>
 
-    <div>
-        <div class="form-group">
-            <label>Rating (1-5):</label>
-            <select asp-for="NewRating" class="form-control" required>
-                <option value="">Select Rating</option>
-                <option value="1">⭐</option>
-                <option value="2">⭐⭐</option>
-                <option value="3">⭐⭐⭐</option>
-                <option value="4">⭐⭐⭐⭐</option>
-                <option value="5">⭐⭐⭐⭐⭐</option>
-            </select>
-        </div>
-    </div>
-
-    <button type="submit">Add Book</button>
+    <button type="submit" class="btn btn-primary">Add Book</button>
 </form>
-
-
-
-
