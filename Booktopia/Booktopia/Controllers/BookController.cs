@@ -89,27 +89,23 @@ namespace Booktopia.Controllers
             return View(book);
         }
 
-        public IActionResult Remove(int id)
+
+
+        [HttpPost]
+        public IActionResult Delete(int id)
         {
             var book = _context.Books.Find(id);
             if (book == null)
             {
                 return NotFound();
             }
-            return View(book);
-        }
 
-        [HttpPost]
-        public IActionResult RemoveConfirmed(int id)
-        {
-            var book = _context.Books.Find(id);
-            if (book != null)
-            {
-                _context.Books.Remove(book);
-                _context.SaveChanges();
-            }
+            _context.Books.Remove(book);
+            _context.SaveChanges();
+
             return RedirectToAction("Index");
         }
+
     }
 }
 

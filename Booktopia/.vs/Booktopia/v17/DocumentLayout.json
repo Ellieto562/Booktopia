@@ -1,12 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\elica\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\project booktopia\\booktopia\\booktopia\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,24 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Booktopia\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\elica\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\Project Booktopia\\Booktopia\\Booktopia\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Booktopia\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T18:06:58.629Z",
-              "EditorCaption": ""
             }
           ]
         }

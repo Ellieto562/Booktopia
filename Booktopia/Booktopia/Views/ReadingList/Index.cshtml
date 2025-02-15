@@ -1,65 +1,75 @@
-﻿@using Booktopia.Models.Entities
-<!-- Reading List View -->
-@model IEnumerable<Booktopia.Models.Entities.ReadingList>
+﻿@model IEnumerable<Booktopia.Models.Entities.ReadingList>
 
 <h2>My Reading Lists</h2>
 
-<!-- Create a New Reading List -->
-<form method="post" asp-controller="ReadingList" asp-action="Create" class="mb-3">
-    <input type="text" name="name" placeholder="Enter list name" required class="form-control" />
-    <button type="submit" class="btn btn-primary mt-2">Create New List</button>
+<!-- Form to Create a New Reading List -->
+<form method="post" asp-controller="ReadingList" asp-action="Create">
+    <label for="name">Enter List Name:</label>
+    <input type="text" name="name" class="form-control" required />
+    <button type="submit" class="btn btn-primary mt-2">Create Reading List</button>
 </form>
 
-@if (Model.Any())
+<hr>
+
+<!-- Form to Add Books to a Reading List -->
+<form method="post" asp-controller="ReadingList" asp-action="AddBook">
+    <label for="bookId">Select a Book:</label>
+    <select name="bookId" class="form-control">
+        @foreach (var book in ViewBag.Books as List<Booktopia.Models.Entities.Book>)
+        {
+            <option value="@book.Id">@book.Title</option>
+        }
+    </select>
+
+    <label for="listId">Select a Reading List:</label>
+    <select name="listId" class="form-control">
+        @foreach (var list in Model)
+        {
+            <option value="@list.Id">@list.Name</option>
+        }
+    </select>
+
+    <button type="submit" class="btn btn-primary mt-2">Add to Reading List</button>
+</form>
+
+<hr>
+
+@foreach (var list in Model)
 {
-    @foreach (var list in Model)
-    {
-        <div class="card mb-3">
-            <div class="card-body">
-                <h4>@list.Name</h4>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4>@list.Name</h4>
 
-                <!-- Rename Form -->
-                <form method="post" asp-controller="ReadingList" asp-action="Rename" class="d-inline">
-                    <input type="hidden" name="listId" value="@list.Id" />
-                    <input type="text" name="newName" placeholder="Rename list" required class="form-control d-inline w-auto" />
-                    <button type="submit" class="btn btn-secondary">Rename</button>
-                </form>
+            <!-- Rename Reading List Form -->
+            <form method="post" asp-controller="ReadingList" asp-action="Rename" class="d-inline">
+                <input type="hidden" name="listId" value="@list.Id" />
+                <input type="text" name="newName" placeholder="New Name" required class="form-control d-inline w-auto" />
+                <button type="submit" class="btn btn-secondary">Rename</button>
+            </form>
 
-                <!-- Delete Button -->
-                <form method="post" asp-controller="ReadingList" asp-action="Delete" class="d-inline">
-                    <input type="hidden" name="listId" value="@list.Id" />
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+            <!-- Delete Reading List Button -->
+            <form method="post" asp-controller="ReadingList" asp-action="Delete" class="d-inline">
+                <input type="hidden" name="listId" value="@list.Id" />
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+            </form>
 
-                <hr />
+            <hr>
 
-                <!-- Books in this Reading List -->
-                @if (list.BookReadingLists.Any())
-                {
-                    <h5>Books:</h5>
-                    <ul>
-                        @foreach (var book in list.BookReadingLists.Select(brl => brl.Book))
-                        {
-                            <li>
-                                @book.Title by @book.Author
-                                <form method="post" asp-controller="ReadingList" asp-action="RemoveBook" class="d-inline">
-                                    <input type="hidden" name="listId" value="@list.Id" />
-                                    <input type="hidden" name="bookId" value="@book.Id" />
-                                    <button type="submit" class="btn btn-sm btn-warning">Remove</button>
-                                </form>
-                            </li>
-                        }
-                    </ul>
-                }
-                else
-                {
-                    <p>No books in this list.</p>
-                }
-            </div>
+            <!-- Display Books in the Reading List -->
+            @if (list.BookReadingLists.Any())
+            {
+                <ul>
+                    @foreach (var bookList in list.BookReadingLists)
+                    {
+                        <li>@bookList.Book.Title by @bookList.Book.Author</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No books in this list.</p>
+            }
         </div>
-    }
+    </div>
 }
-else
-{
-    <p>You have no reading lists. Create one above!</p>
-}
+

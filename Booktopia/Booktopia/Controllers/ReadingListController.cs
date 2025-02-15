@@ -30,8 +30,12 @@ namespace Booktopia.Controllers
                                        .Include(rl => rl.BookReadingLists)
                                        .ThenInclude(brl => brl.Book)
                                        .ToList();
+
+            ViewBag.Books = _context.Books.ToList();
+
             return View(readingLists);
         }
+
 
         // 📌 Create a new reading list
         [HttpPost("Create")]
@@ -56,12 +60,15 @@ namespace Booktopia.Controllers
             return RedirectToAction("Index");
         }
 
+
         // 📌 Add a book to a reading list
-        [HttpPost("AddBook")]
+        [HttpPost]
         public IActionResult AddBook(int listId, int bookId)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var readingList = _context.ReadingLists.FirstOrDefault(rl => rl.Id == listId && rl.UserId == userId);
+            var readingList = _context.ReadingLists
+                                      .Include(rl => rl.BookReadingLists)
+                                      .FirstOrDefault(rl => rl.Id == listId && rl.UserId == userId);
 
             if (readingList == null)
             {
@@ -74,9 +81,8 @@ namespace Booktopia.Controllers
                 return NotFound("Book not found.");
             }
 
-            // Check if book already exists in the list
-            bool bookExists = _context.BookReadingLists.Any(brl => brl.ReadingListId == listId && brl.BookId == bookId);
-            if (!bookExists)
+            // Check if the book is already in the list
+            if (!readingList.BookReadingLists.Any(brl => brl.BookId == bookId))
             {
                 var bookReadingList = new BookReadingList
                 {

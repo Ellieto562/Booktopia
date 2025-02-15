@@ -34,7 +34,12 @@
                 <td>@book.Genre</td>
                 <td>
                     <a asp-action="Update" asp-route-id="@book.Id" class="btn btn-warning">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@book.Id" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
+                    <form method="post" asp-controller="Book" asp-action="Delete">
+                        <input type="hidden" name="id" value="@book.Id" />
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+                    </form>
+
+
                 </td>
             </tr>
         }
