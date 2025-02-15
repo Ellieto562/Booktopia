@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj": {}
+    "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj": {
+    "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj",
+        "projectUniqueName": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj",
         "projectName": "Booktopia",
-        "projectPath": "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj",
-        "packagesPath": "C:\\Users\\elica\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\Booktopia\\obj\\",
+        "projectPath": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj",
+        "packagesPath": "C:\\Users\\Yeshim Sadula\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\elica\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Yeshim Sadula\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,7 +38,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -94,28 +89,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-              "version": "[9.0.101, 9.0.101]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -124,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

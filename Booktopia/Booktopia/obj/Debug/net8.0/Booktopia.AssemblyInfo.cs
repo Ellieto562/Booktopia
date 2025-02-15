@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Booktopia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95a4c2d0ecfd3b31026373892cad8355f3c87d3c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Booktopia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Booktopia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

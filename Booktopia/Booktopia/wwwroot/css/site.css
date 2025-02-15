@@ -20,25 +20,36 @@ html {
 
 body {
     font-family: Arial, sans-serif;
+    color: #56021F !important;
     margin: 20px;
-    background-color: #f8f9fa;
+    background-color: #F4CCE9 !important;
+}
+
+.navbar {
+    background-color: #D17D98 !important;
+}
+
+.nav-link{
+    color: #56021F !important;
 }
 
 h1, h2 {
-    color: #333;
+    color: #56021F !important;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background: white;
+    background: #F4CCE9;
+    color: #F4CCE9;
 }
 
 th, td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
+    background-color: #F4CCE9;
 }
 
 th {
@@ -48,12 +59,35 @@ th {
 
 button {
     padding: 5px 10px;
-    background: #28a745;
-    color: white;
+    background: #F4CCE9;
+    color: #56021F;
     border: none;
     cursor: pointer;
 }
 
-    button:hover {
-        background: #218838;
-    }
+.form-control {
+    background-color: #D17D98;
+}
+
+button:hover {
+    background: #218838;
+}
+.btn {
+    background-color: #7D1C4A;
+}
+
+.card-body{
+    background-color: #F4CCE9;
+}
+
+.btn-link{
+    color: #F4CCE9 !important;
+}
+
+.btn-warning{
+    color: white !important;
+}
+
+input .form-control{
+    color: #56021F !important;
+}

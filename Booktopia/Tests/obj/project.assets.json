@@ -8594,24 +8594,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elica\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Yeshim Sadula\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\Tests\\Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\Tests\\Tests.csproj",
-      "packagesPath": "C:\\Users\\elica\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\Tests\\obj\\",
+      "projectPath": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Tests\\Tests.csproj",
+      "packagesPath": "C:\\Users\\Yeshim Sadula\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Tests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\elica\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Yeshim Sadula\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8619,15 +8614,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj": {
-              "projectPath": "C:\\Users\\elica\\OneDrive\\Работен плот\\Project Booktopia\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj"
+            "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj": {
+              "projectPath": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Booktopia.csproj"
             }
           }
         }
@@ -8640,7 +8634,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -8683,54 +8677,16 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-            "version": "[9.0.101, 9.0.101]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Net.Http' 4.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-7jgj-8wvc-jh57",
-      "libraryId": "System.Net.Http",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Text.RegularExpressions' 4.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-cmhx-cq75-c4mj",
-      "libraryId": "System.Text.RegularExpressions",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
     {
       "code": "NU1701",
       "level": "Warning",

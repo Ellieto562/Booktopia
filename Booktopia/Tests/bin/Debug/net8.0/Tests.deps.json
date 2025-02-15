@@ -1726,10 +1726,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.2"
         },
         "runtime": {
-          "Booktopia.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Booktopia.dll": {}
         }
       }
     }
