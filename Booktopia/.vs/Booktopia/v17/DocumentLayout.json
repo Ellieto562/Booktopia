@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\yeshim sadula\\documents\\github\\booktopia\\booktopia\\booktopia\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|c:\\users\\yeshim sadula\\documents\\github\\booktopia\\booktopia\\booktopia\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{52EE506A-2A07-4BC6-AC3D-61F4F96B292C}|Booktopia\\Booktopia.csproj|solutionrelative:booktopia\\views\\book\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -35,6 +39,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Models\\Entities\\Book.cs",
+              "RelativeDocumentMoniker": "Booktopia\\Models\\Entities\\Book.cs",
+              "ToolTip": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Models\\Entities\\Book.cs",
+              "RelativeToolTip": "Booktopia\\Models\\Entities\\Book.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T11:07:26.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Views\\Book\\Index.cshtml",
               "RelativeDocumentMoniker": "Booktopia\\Views\\Book\\Index.cshtml",
@@ -47,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Views\\ReadingList\\Index.cshtml",
               "RelativeDocumentMoniker": "Booktopia\\Views\\ReadingList\\Index.cshtml",
@@ -55,12 +72,11 @@
               "RelativeToolTip": "Booktopia\\Views\\ReadingList\\Index.cshtml",
               "ViewState": "AQIAADMAAAAAAAAAAAAAACcAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T21:26:41.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T21:26:41.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "Booktopia\\wwwroot\\css\\site.css",
@@ -68,12 +84,11 @@
               "RelativeToolTip": "Booktopia\\wwwroot\\css\\site.css",
               "ViewState": "AQIAAEUAAAAAAAAAAAAAAFoAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-15T21:07:56.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T21:07:56.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Booktopia\\Views\\Home\\Index.cshtml",
@@ -81,12 +96,11 @@
               "RelativeToolTip": "Booktopia\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T21:11:58.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T21:11:58.911Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Yeshim Sadula\\Documents\\GitHub\\Booktopia\\Booktopia\\Booktopia\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Booktopia\\Views\\Shared\\_Layout.cshtml",
@@ -94,8 +108,7 @@
               "RelativeToolTip": "Booktopia\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAACMAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T21:12:32.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T21:12:32.852Z"
             }
           ]
         }
